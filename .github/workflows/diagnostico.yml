@@ -1,0 +1,27 @@
+name: Diagnostico (manual)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Testar respostas da SP Kids
+        run: |
+          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36'
+          B=https://spkidsdistribuidora.com.br
+          for id in 2003 1997 1982 1988 1992 2001; do
+            echo "=== store/v1/products/$id"
+            curl -s -A "$UA" -o /tmp/r.txt -w 'HTTP %{http_code}\n' "$B/wp-json/wc/store/v1/products/$id?_=$RANDOM"
+            head -c 400 /tmp/r.txt; echo
+          done
+          for slug in celebracao-de-30-anos-treinador-avancado pokemon-celebracao-de-30-anos-box-colecao-com-fichario pokemon-celebracao-de-30-anos-box-ex celebracao-de-30-anos-blister-duplo-com-moeda aniversario-de-30-anos-blister-triplo-c-adesivo pokemon-celebracao-de-30-anos-box-colecao-com-poster; do
+            echo "=== pagina $slug"
+            curl -s -L -A "$UA" -o /tmp/p.html -w 'HTTP %{http_code} final=%{url_effective}\n' "$B/produto/$slug/"
+            grep -o -i '<title>[^<]*' /tmp/p.html | head -1
+            grep -o -i 'data-product_id=\"[0-9]*\"\|postid-[0-9]*\|out-of-stock\|in-stock\|Esgotado\|Fora de estoque\|Venda limitada[^<]*\|Caixa com [^<]*' /tmp/p.html | sort -u | head -10
+          done
+          echo "=== wp/v2 product?slug=..."
+          curl -s -A "$UA" "$B/wp-json/wp/v2/product?slug=celebracao-de-30-anos-treinador-avancado,pokemon-celebracao-de-30-anos-box-colecao-com-fichario,pokemon-celebracao-de-30-anos-box-ex,celebracao-de-30-anos-blister-duplo-com-moeda,aniversario-de-30-anos-blister-triplo-c-adesivo&_fields=id,slug,status,modified,class_list" | head -c 1500; echo
