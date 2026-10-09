@@ -1,0 +1,66 @@
+{
+ "avisos_liberacao": 0,
+ "busca_spk": {
+  "2001": {
+   "instock": false,
+   "link": "https://spkidsdistribuidora.com.br/produto/pokemon-celebracao-de-30-anos-box-colecao-com-poster/",
+   "slug": "pokemon-celebracao-de-30-anos-box-colecao-com-poster"
+  }
+ },
+ "copag": [
+  "Baralho Batman 85 Anos Edição Especial",
+  "Baralho Bicycle Disney Cats and Dogs",
+  "Baralho De Batalha Deluxe Pokémon TCG Ninetales Ex",
+  "Blister Quadrúplo Pokémon ME05 Escuridão Absoluta",
+  "Blister Triplo Pokémon ME04 Caos Ascendente",
+  "Blister Triplo Pokémon ME05 Escuridão Absoluta",
+  "Blister Triplo Pokémon Makuhita ME03 Equilíbrio Perfeito",
+  "Blister Unitário Pokémon ME04 Caos Ascendente",
+  "Blister Unitário Pokémon ME05 Escuridão Absoluta",
+  "Box Display Pokémon Escarlate e Violeta 10 Rivais Predestinados",
+  "Box Display Pokémon ME04 Caos Ascendente",
+  "Box Pokémon Coleção Mega Greninja EX",
+  "Box Pokémon Coleção Mega Luar Mega Gengar",
+  "Box Pokémon Coleção Mega Zygarde Ex",
+  "Box Pokémon Coleção Parceiro Inicial - Série 2",
+  "Box Pokémon Infernape V",
+  "Combo de Booster Pokémon ME04 Caos Ascendente",
+  "Combo de Booster Pokémon ME05 Escuridão Absoluta",
+  "Deck Batalha De Liga Pokémon Mewtwo Ex",
+  "Deck Batalha de Liga Pokémon Mega Lucario EX",
+  "Eu Vi! Os Sete Anões",
+  "Treinador Avançado Pokémon ME04 Caos Ascendente",
+  "Treinador Avançado Pokémon ME05 Escuridão Absoluta"
+ ],
+ "erros": {
+  "copag": 0,
+  "spk": 0
+ },
+ "produtos": {
+  "1982": {
+   "existe": false
+  },
+  "1988": {
+   "existe": false
+  },
+  "1992": {
+   "existe": false
+  },
+  "1997": {
+   "existe": false
+  },
+  "2001": {
+   "compravel": false,
+   "em_estoque": false,
+   "existe": true,
+   "link": "https://spkidsdistribuidora.com.br/produto/pokemon-celebracao-de-30-anos-box-colecao-com-poster/",
+   "maximo": 1,
+   "nome": "POKEMON &#8211; CELEBRACAO DE 30 ANOS &#8211; BOX COLECAO COM POSTER",
+   "preco": "41071"
+  },
+  "2003": {
+   "existe": false
+  }
+ },
+ "ultimo_ok": "2026-10-09"
+}
